@@ -1,0 +1,161 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #591b9f, #7d4caf, #f3f3f3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.tagline {
+    background-color: #4c84af;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.tagline i {
+    margin-right: 5px;
+}
+
+.container {
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.title {
+    color: #070707;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #2d5d2e;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #664caf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.result.highlight {
+    color: #664caf; /* Change the color to emphasize */
+    font-size: 24px; /* Increase font size for emphasis */
+    border: 2px solid #664caf; /* Add border to emphasize */
+    padding: 10px; /* Add padding for better appearance */
+    border-radius: 5px; /* Add border radius for better appearance */
+    margin-bottom: 20px; /* Add space below the result */
+}
+
+.fact-tip {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Add space between prediction and "Did You Know?" */
+}
+
+.facts,
+.tips {
+    width: 48%;
+    padding: 20px;
+    border: 1px solid #3f2f2f;
+    border-radius: 5px;
+}
+
+.facts h2,
+.tips h2 {
+    color: #4CAF50;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.facts p,
+.tips p {
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.warning {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    animation: slideInUp 1s ease forwards;
+    z-index: 999;
+    display: none; /* Initially hide the warning */
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
