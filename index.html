@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="tagline">
+        <i class="fas fa-heartbeat"></i>
+        <span>Empowering you with data-driven insights to manage your health better.</span>
+    </div>
+    <div class="container">
+        <h1 class="title">Diabetes Predictor</h1>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" class="input-field">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" min="0" class="input-field" required>
+        </div>
+        <div class="form-group">
+            <label for="hypertension">Hypertension:</label>
+            <select id="hypertension" class="input-field">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="smoking">Smoking History:</label>
+            <select id="smoking" class="input-field">
+                <option value="Never">Never</option>
+                <option value="Former">Former</option>
+                <option value="Current">Current</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="bmi">BMI:</label>
+            <input type="number" id="bmi" min="0" class="input-field" required>
+        </div>
+        <div class="form-group">
+            <label for="heartdisease">Heart Disease:</label>
+            <select id="heartdisease" class="input-field">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+        <button onclick="predict()" class="btn">Predict</button>
+        <div id="result" class="result"></div>
+
+        <div class="fact-tip">
+            <div class="facts">
+                <h2>Did You Know?</h2>
+                <p id="fact"></p>
+            </div>
+            <div class="tips">
+                <h2>Healthy Tip</h2>
+                <p id="tip"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="warning">
+        <p>This project is still being tested and improved. Use with caution.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
